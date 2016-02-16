@@ -1,4 +1,4 @@
-# Gamebuildr Issue Tracker
+# Gamebuildr Roadmap and Issue Tracker
 
 This repository is the public facing issue tracker and roadmap for the Gamebuildr.io web application.
 
