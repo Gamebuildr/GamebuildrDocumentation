@@ -1,6 +1,6 @@
 # Gamebuildr Roadmap and Issue Tracker
 
-This repository is the public facing issue tracker and roadmap for the Gamebuildr.io web application.
+This repository is the public facing issue tracker and roadmap for the Gamebuildr.io continuous integration tool for game devs.
 
 If you have any issues with the application, need help setting something up, or would like to report a bug please raise them in the [issue tracking section](https://github.com/herman-rogers/gamebuildr_issues/issues) of this repository. In addition, if you have any questions, feedback, or feature requests this is also the best place to raise them.
 
