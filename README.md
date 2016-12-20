@@ -1,9 +1,15 @@
-# Gamebuildr Roadmap and Issue Tracker
+![alt tag](https://storage.googleapis.com/gamebuildr-151415.appspot.com/GamebuildrLogo-Teal.png)
 
-This repository is the public facing issue tracker and roadmap for the Gamebuildr.io continuous integration tool for game devs.
+# Gamebuildr Documentation
 
-If you have any issues with the application, need help setting something up, or would like to report a bug please raise them in the [issue tracking section](https://github.com/herman-rogers/gamebuildr_issues/issues) of this repository. In addition, if you have any questions, feedback, or feature requests this is also the best place to raise them.
+### Documentation.
 
-If you want to see the current roadmap of where we are at in development please check out the [milestone list](https://github.com/herman-rogers/gamebuildr_issues/milestones). We also have an active list of work we go through on the [Gamebuildr Pivotal Tracker](https://www.pivotaltracker.com/n/projects/1540083) if you want to check out the most recent work.
+This repository contains all the documentation, requests, and bugs for [Gamebuildr CI](http://www.gamebuildr.io). It is broadly split into two areas: a section for users and a section for developers. The former will help users get up and running with Gamebuildr as a tool integrating into their workflow while the other discusses our application, the technology behind it, and the techniques we use for our current system.  
 
-We're currently working through the beta phase of the application so we're rolling out features at a rapid pace while noting the bugs along the way. We will attempt to address all the issues accordingly and, in the end, we hope everyone enjoys Gamebuildr!
+### Feedback, Issues, and Feature Requests.
+
+If you have any issues with the application, need help setting something up, or would like to report a bug please raise them in the [issue/feature tracking section](https://github.com/herman-rogers/gamebuildr_issues/issues) of this repository. In addition, if you have any questions, feedback, or feature requests this is also the best place to raise them or by directly contacting Gamebuildr at contact@gamebuildr.io.
+
+###Thanks for your Support!
+
+We're currently working through the beta phase of the application so we're rolling out features at a rapid pace while noting the bugs along the way. We will attempt to address all the questions, issues, and feedback accordingly and, in the end, we hope everyone enjoys Gamebuildr!
