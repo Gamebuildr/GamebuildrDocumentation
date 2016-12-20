@@ -4,7 +4,9 @@
 
 ### Documentation.
 
-This repository contains all the documentation, requests, and bugs for [Gamebuildr CI](http://www.gamebuildr.io). It is broadly split into two areas: a section for users and a section for developers. The former will help users get up and running with Gamebuildr as a tool integrating into their workflow while the other discusses our application, the technology behind it, and the techniques we use for our current system.  
+The main documenation can be found at [Gamebuildr Documentation](http://gamebuildrdocumentation.readthedocs.io/en/latest/?). If reading the docs only is not your thing then continue reading below!
+
+This repository contains all the documentation, requests, and bugs for [Gamebuildr CI](http://www.gamebuildr.io). It is broadly split into two areas: a section for users and a section for developers. The former will help users get up and running with Gamebuildr as a tool integrating into their workflow while the other discusses our application, the technology behind it, and the techniques we use for our current system.
 
 ### Feedback, Issues, and Feature Requests.
 
