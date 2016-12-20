@@ -10,7 +10,7 @@ Welcome to Gamebuildr's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   gamebuildr-about
 
 Indices and tables
 ==================
