@@ -14,3 +14,9 @@ and, based on the user profile (free, indie, enterprise), Gogeta will either pul
 
    gogeta-docker
    gogeta-kubernetes
+
+
+Navigation
+------------
+* :ref:`genindex`
+* :ref:`search`

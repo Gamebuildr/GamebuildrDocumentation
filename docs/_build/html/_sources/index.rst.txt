@@ -10,13 +10,18 @@ Welcome to Gamebuildr's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   gamebuildr-about
+   gamebuildr/index
    gogeta/index
 
 
-Indices and tables
-==================
-
+Navigation
+------------
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   gamebuildr/index
+   gogeta/index
