@@ -11,6 +11,7 @@ Welcome to Gamebuildr's documentation!
    :caption: Contents:
 
    gamebuildr-about
+   gogeta
 
 Indices and tables
 ==================
