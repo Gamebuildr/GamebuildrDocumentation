@@ -1,4 +1,4 @@
 Gogeta Docker
 ================
 
-Gamebuildr is a Continuous Integration (CI) system built specifically for game developers.
+Gogeta is packaged in a container on Docker Hub (gamebuildr/gogeta) and is pushed directly onto a Google Cloud Kubernetes cluster.
