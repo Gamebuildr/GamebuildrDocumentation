@@ -2,6 +2,14 @@
 
 # Gamebuildr Documentation
 
+#### tl;dr
+
+[Issues/feature requests](https://github.com/herman-rogers/gamebuildr_issues/issues)
+
+[Gamebuildr Documentation](http://gamebuildrdocumentation.readthedocs.io/en/latest/?)
+
+Say Hello: contact@gamebuildr.io
+
 ### Documentation.
 
 The main documenation can be found at [Gamebuildr Documentation](http://gamebuildrdocumentation.readthedocs.io/en/latest/?). If reading the docs only is not your thing then continue reading below!
