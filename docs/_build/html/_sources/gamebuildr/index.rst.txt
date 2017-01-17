@@ -7,5 +7,4 @@ Gamebuildr is a Continuous Integration (CI) system built specifically for game d
 
 Navigation
 ------------
-* :ref:`genindex`
 * :ref:`search`

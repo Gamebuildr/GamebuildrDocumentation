@@ -46,7 +46,26 @@
 <h1>Gogeta Kubernetes<a class="headerlink" href="#gogeta-kubernetes" title="Permalink to this headline">¶</a></h1>
 <p>Gogeta&#8217;s docker containers run across multiple Kubernetes clusters to spin up a new cluster create a Google Kubernetes cluster
 through either the dashboard on in the provided console.</p>
-<p>Once the cluster is up and running start the system by running:</p>
+<div class="section" id="push-to-a-cluster">
+<h2>Push to a cluster<a class="headerlink" href="#push-to-a-cluster" title="Permalink to this headline">¶</a></h2>
+<p>Note: This assumes you&#8217;re using your local command prompt.</p>
+<p>To push to a cluster you first need to build your docker image tag it appropriately, and push to googles container engine:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>docker build -t gamebuildr/gogeta
+docker tag gamebuildr/gogeta gcr.io/:projectname/gogeta
+gcloud docker -- push gcr.io/:projectname/gogeta
+</pre></div>
+</div>
+<p>After tagging and pushing you should prep your local environment to enable pushing to your cluster:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>gcloud config <span class="nb">set</span> project :projectname
+gcloud config <span class="nb">set</span> compute/zone :region
+gcloud config <span class="nb">set</span> container/cluster :clustername
+gcloud config <span class="nb">set</span> container/use_client_certificate <span class="nb">true</span>
+gcloud container clusters get-credentials :clustername
+kubectl run :clustername --image<span class="o">=</span>gcr.io/:projectname/gogeta --port<span class="o">=</span>8080
+</pre></div>
+</div>
+<p>You&#8217;ll now be able to see your docker image running on your new cluster!</p>
+</div>
 </div>
 
 
@@ -54,7 +73,15 @@ through either the dashboard on in the provided console.</p>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gogeta Kubernetes</a><ul>
+<li><a class="reference internal" href="#push-to-a-cluster">Push to a cluster</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>

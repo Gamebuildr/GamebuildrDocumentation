@@ -6,22 +6,17 @@
 Gamebuildr Documentation
 ======================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+**Gamebuildr Documentation** is documentation for our continuous integration solution for game developers http://www.gamebuildr.io.
 
-   gamebuildr/index
-   gogeta/index
-
+Everything in here is related to our architecture including the our core continuous integration, Mr. Robot, our SCM service, Gogeta, 
+and all other microservices under the Gamebuildr umbrella.
 
 Navigation
 ------------
-* :ref:`genindex`
-* :ref:`search`
 
 .. toctree::
-   :glob:
-   :maxdepth: 1
+   :maxdepth: 2
+   :caption: Microservices:
 
    gamebuildr/index
    gogeta/index
