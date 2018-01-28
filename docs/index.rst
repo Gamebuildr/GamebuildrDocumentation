@@ -32,12 +32,13 @@ Currently our main services are:
 
 Everything on this website is related to our architecture and how everything works together.
 
-Navigation
+Table of Contents
 ------------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Microservices:
+   :caption: Gamebuildr Systems:
 
+   architecture/index
    gamebuildr/index
    gogeta/index
