@@ -1,3 +1,4 @@
+from recommonmark.parser import CommonMarkParser
 # -*- coding: utf-8 -*-
 #
 # Gamebuildr documentation build configuration file, created by
@@ -38,8 +39,11 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
+source_suffix = ['.rst', '.md']
 
 # The master toctree document.
 master_doc = 'index'

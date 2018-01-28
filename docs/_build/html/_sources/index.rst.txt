@@ -6,10 +6,31 @@
 Gamebuildr Documentation
 ======================================
 
-**Gamebuildr Documentation** is documentation for our continuous integration solution for game developers http://www.gamebuildr.io.
+**Welcome to the Gamebuildr dev docs!** This website holds documentation about our dashboard application and information about the microservices used to power our CI/CD solutions. 
 
-Everything in here is related to our architecture including the our core continuous integration, Mr. Robot, our SCM service, Gogeta, 
-and all other microservices under the Gamebuildr umbrella.
+Currently our main services are:
+
+* The web app which is our main visial dashboard.
+  * React/Redux
+  * es6
+
+* The web api 
+  * node.js
+  * es6
+
+* Hal: Container API service to start up and close down microservice
+  * golang
+
+* Dave: Docker container custom management system
+  * golang
+
+* Gogeta: Source control monitor and updater
+  * golang
+
+* Mr. Robot: Game engine builder
+  * golang
+
+Everything on this website is related to our architecture and how everything works together.
 
 Navigation
 ------------

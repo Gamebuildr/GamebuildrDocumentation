@@ -61,7 +61,7 @@ gcloud config <span class="nb">set</span> compute/zone :region
 gcloud config <span class="nb">set</span> container/cluster :clustername
 gcloud config <span class="nb">set</span> container/use_client_certificate <span class="nb">true</span>
 gcloud container clusters get-credentials :clustername
-kubectl run :clustername --image<span class="o">=</span>gcr.io/:projectname/gogeta --port<span class="o">=</span>8080
+kubectl run :clustername --image<span class="o">=</span>gcr.io/:projectname/gogeta --port<span class="o">=</span><span class="m">8080</span>
 </pre></div>
 </div>
 <p>You&#8217;ll now be able to see your docker image running on your new cluster!</p>
@@ -116,8 +116,8 @@ kubectl run :clustername --image<span class="o">=</span>gcr.io/:projectname/goge
       &copy;2016, Gamebuildr Ltd..
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
       <a href="../_sources/gogeta/gogeta-kubernetes.rst.txt"

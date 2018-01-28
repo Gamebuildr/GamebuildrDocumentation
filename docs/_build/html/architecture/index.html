@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gamebuildr Architecture &#8212; Gamebuildr 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gamebuildr-architecture">
+<span id="gamebuildr-architecture"></span><h1>Gamebuildr Architecture<a class="headerlink" href="#gamebuildr-architecture" title="Permalink to this headline">¶</a></h1>
+<p>The Gamebuildr architecture is comprised of the main web app, which hosts the front-end and api, and the microservices.</p>
+<p>This section will give a brief overview of how the system works and the data flows from the front-end to the microservices.</p>
+<div class="section" id="front-end-to-microservices">
+<span id="front-end-to-microservices"></span><h2>Front-end to Microservices<a class="headerlink" href="#front-end-to-microservices" title="Permalink to this headline">¶</a></h2>
+<p>When the user interacts with the web app there are two routes that information is gathered and given to a user. First, if the user is manipulating system data, such as projects or generic information, the web app will communicate directly with the web api. In many cases the web api will gather information from the database and return it directly to the front-end.</p>
+<p>The second notable interaction is when a user adds in a new buildr (which is either adding source code or running an engine build). When this happens the system will send a message to Amazon SNS to notify the microservices that the user wants to create a new buildr. The microservices will then re-route the message to the correct endpoint for it to be processed.</p>
+</div>
+<div class="section" id="mircroservice-interaction">
+<span id="mircroservice-interaction"></span><h2>Mircroservice interaction<a class="headerlink" href="#mircroservice-interaction" title="Permalink to this headline">¶</a></h2>
+<p>To manage messages coming from Amazon SNS we use two specific systems. First, the <strong>Dave</strong> microservice will redirect aAmazon SNS messages either to our source control system <strong>Gogeta</strong> or our game engine service <strong>Mr. Robot</strong>. Due to the fact that Mr. Robot with the corresponding engine is contained inside Docker we also utilize another microservice <strong>Hal</strong> to spin up and down requested docker containers directly from docker.</p>
+<p>In other words the flow looks like:</p>
+<ol class="simple">
+<li>Message is sent from front-end to Amazon SNS.</li>
+<li>Dave is watching for messages and reads the message off the queue.</li>
+<li>(a) If the message is for source control then Gogeta will read the message and process.</li>
+<li>(b) If the message is for a new build then Hal will read the message off the queue, process the engine version and id, and start the correct docker container.</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gamebuildr Architecture</a><ul>
+<li><a class="reference internal" href="#front-end-to-microservices">Front-end to Microservices</a></li>
+<li><a class="reference internal" href="#mircroservice-interaction">Mircroservice interaction</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/architecture/index.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Gamebuildr Ltd..
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/architecture/index.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,6 @@
+Gamebuildr Architecture
+=============================================
+
+The Gamebuildr architecture is comprised of the main web app, which hosts the front-end and api, and the microservices.
+
+
