@@ -4,41 +4,40 @@
    contain the root `toctree` directive.
 
 Gamebuildr Documentation
-======================================
+========================
 
 **Welcome to the Gamebuildr dev docs!** This website holds documentation about our dashboard application and information about the microservices used to power our CI/CD solutions. 
 
 Currently our main services are:
 
 * The web app which is our main visial dashboard.
-  * React/Redux
-  * es6
+   * React/Redux
+   * es6
 
 * The web api 
-  * node.js
-  * es6
+   * node.js
+   * es6
 
 * Hal: Container API service to start up and close down microservice
-  * golang
+   * golang
 
 * Dave: Docker container custom management system
-  * golang
+   * golang
 
 * Gogeta: Source control monitor and updater
-  * golang
+   * golang
 
 * Mr. Robot: Game engine builder
-  * golang
+   * golang
 
 Everything on this website is related to our architecture and how everything works together.
 
 Table of Contents
-------------
+-----------------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Gamebuildr Systems:
 
    architecture/index
-   gamebuildr/index
-   gogeta/index
+   guides/index
+

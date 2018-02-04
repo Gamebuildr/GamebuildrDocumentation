@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Gogeta SCM Microservice &#8212; Gamebuildr 0.0.1 documentation</title>
+    <title>Gamebuildr Guides &#8212; Gamebuildr 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -26,6 +26,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Gamebuildr Architecture" href="../architecture/index.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -41,29 +42,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="gogeta-scm-microservice">
-<h1>Gogeta SCM Microservice<a class="headerlink" href="#gogeta-scm-microservice" title="Permalink to this headline">¶</a></h1>
-<p>Gogeta is the Gamebuildr microservice written in Go that montiors and clones code repositories.
-It currently supports Git and Github with other integrations in mind.</p>
-<p>Currently Gogeta runs as a container on Kubernetes polling messages from Amazon SQS. When a new message is polled a new event is triggered
-and, based on the user profile (free, indie, enterprise), Gogeta will either pull the .zip archive or clone the full repo.</p>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gogeta-docker.html">Gogeta Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gogeta-kubernetes.html">Gogeta Kubernetes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gogeta-kubernetes.html#push-to-a-cluster">Push to a cluster</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="navigation">
-<h2>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="gamebuildr-guides">
+<span id="gamebuildr-guides"></span><h1>Gamebuildr Guides<a class="headerlink" href="#gamebuildr-guides" title="Permalink to this headline">¶</a></h1>
+<p>This section provides several different guides to help updating, maintaining, or adding new systems to Gamebuildr.</p>
 <ul class="simple">
-<li><a class="reference internal" href="../genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="../search.html"><span class="std std-ref">Search Page</span></a></li>
+<li><a class="reference external" href="./add-game-engine.html">Adding a new game engine</a></li>
 </ul>
-</div>
 </div>
 
 
@@ -73,21 +57,22 @@ and, based on the user profile (free, indie, enterprise), Gogeta will either pul
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
+  <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../architecture/index.html">Gamebuildr Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Gamebuildr Guides</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gamebuildr Guides</a></li>
 </ul>
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../architecture/index.html" title="previous chapter">Gamebuildr Architecture</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/gogeta/index.rst.txt"
+      <li><a href="../_sources/guides/index.md.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -113,7 +98,7 @@ and, based on the user profile (free, indie, enterprise), Gogeta will either pul
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="../_sources/gogeta/index.rst.txt"
+      <a href="../_sources/guides/index.md.txt"
           rel="nofollow">Page source</a>
     </div>
 
